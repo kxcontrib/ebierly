@@ -1,0 +1,9 @@
+http://en.wikipedia.org/wiki/Travelling_salesman_problem
+
+requires kdb+ 2.4 below or later to get proper result
+2008.03.13
+random number generator: multiply-with-carry instead of lagged fibonacci
+http://en.wikipedia.org/wiki/Multiply-with-carry
+
+cd ga/
+q tsp.q

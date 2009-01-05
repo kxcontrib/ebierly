@@ -1,0 +1,32 @@
+http://en.wikipedia.org/wiki/Genetic_programming
+
+This is code for a Genetic Programming paradigm as described in John Koza's book "Genetic Programming".
+http://books.google.com/books?id=Bhtxo60BV0EC&dq=data+minig+and+gentic+programming&printsec=frontcover&source=in&hl=en&sa=X&oi=book_result&resnum=11&ct=result#PPR7,M1
+
+You will see page numbers from this book in the code from where you may get more detailed information.
+
+All four problems presented use the same gp.q code of about 100 lines.
+
+I have included a browseStep routine that you may use to step through the successful solutions in the console while visually rendering in a browser.
+
+Install preserving dir structure of the zip file
+
+requires kdb+ 2.4 below or later to get proper results for seeds
+2008.03.13
+random number generator: multiply-with-carry instead of lagged fibonacci
+http://en.wikipedia.org/wiki/Multiply-with-carry
+
+/ main module
+gp/gp.q
+/ model support
+gp/ant/ant.q
+/ regression
+gp/reg/reg.q
+
+/ solution demonstrations. excute from the leaf dir i.e q santafe.q
+gp/ant/santafe/santafe.q
+gp/ant/losaltos/losaltos.q
+gp/reg/quadratic/quadratic.q
+gp/reg/ephemeral/ephemeral.q
+
+ebierly@gmail.com
