@@ -104,6 +104,11 @@ runModel:{[seed]
  generNation seed;
  -1"";"t"$.z.T-b}
 
+findHit:{[s]
+ runModel s;
+ delete from`gp_bestof where not hit;
+ gp_bestof}
+
 \
 
 preQfix:{./[x;reverse pointPaths[x]`nodes;{$[()~a:(-1_raze over string[1_x],'";");string[x 0];string[x 0],"[",a,"]"]}]}

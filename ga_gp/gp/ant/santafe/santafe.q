@@ -42,7 +42,7 @@ T_:(0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 
 \l ../ant.q
 
-runModel 79
+runModel 323
 
 -1"";
 
@@ -51,28 +51,5 @@ show phenoType first exec tree from gp_bestof where hit
 
 -1"";
 
--1"browseStep 79";
+-1"browseStep 323";
 
-\
-
-min STEP
-seed=-5520321
-gen 58
-depth 14
-`ifFood
-`move
-(`ifFood;(`ifFood;`move;(`ifFood;`move;(`ifFood;`move;(`ifFood;(`ifFood;(`ifFood;(`ifFood;(`ifFood;(`ifFood;(`ifFood;(`ifFood;`ifFood`right`left;`left);`left);`left);`move);`left);`left);`left);`left))));(`ifFood;`move;(`ifFood;`move;(`ifFood;`move;(`ifFood;`move;(`ifFood;`move;`ifFood`move`move))))))
-ITERATIONS 38
-STEP 329
-
-min depth
-seed=-99606
-gen 65
-depth 5
-`ifFood
-(`ifFood;(`prog3;`ifFood`move`left;`ifFood`right`right;`move);`left)
-(`ifFood;`move;`ifFood`move`right)
-ITERATIONS 78
-STEP 387
-
-sum runModel each neg neg[30]?999999999

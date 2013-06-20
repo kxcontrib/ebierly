@@ -11,10 +11,7 @@ I have included a browseStep routine that you may use to step through the succes
 
 Install preserving dir structure of the zip file
 
-requires kdb+ 2.4 below or later to get proper results for seeds
-2008.03.13
-random number generator: multiply-with-carry instead of lagged fibonacci
-http://en.wikipedia.org/wiki/Multiply-with-carry
+requires >= kdb+ 3.1 for multiprocess peach via tcp
 
 / main module
 gp/gp.q

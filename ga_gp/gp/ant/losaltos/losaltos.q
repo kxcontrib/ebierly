@@ -115,7 +115,7 @@ Model[`fns`size`breed]:(value Arity;2000;1000)
 
 TOURNPOOL:28
 
-runModel -4864422
+runModel 1369
 
 -1"";
 
@@ -125,41 +125,17 @@ show phenoType first exec tree from gp_bestof where hit
 -1"";
 
 \
-browseStep -486442
 
-\c 25 400
-min STEP
-seed=6858804
-run 0
-gen 44
-depth 11
-`prog3
-(`prog2;(`prog3;`left;(`ifFood;`left;(`ifFood;`right;(`ifFood;`move;(`ifFood;`move;`ifFood`move`move))));(`ifFood;(`prog2;(`prog3;`left;(`ifFood;`left;(`ifFood;`right;`ifFood`move`move));(`ifFood;(`ifFood;(`ifFood;(`ifFood;`move;`ifFood`left`move);`left);(`prog3;`left;`left;(`ifFood;`left;`ifFood`right`move)));`ifFood`move`right));`move);`ifFood`move`right));`move)
-`ifFood`move`move
-`left
-ITERATIONS 132
-STEP 2051
+/ to find your own solutions based on initial seed
 
-\c 25 150
-min depth
-seed=-4864422
-run 4
-gen 12
-depth 5
-`prog3
-`ifFood`move`right
-`move
-(`prog4;(`prog4;`left;`ifFood`move`left;(`ifFood;`move;`prog2`right`move);`move);`ifFood`left`left;(`ifFood;`right;`prog2`right`move);`move)
-ITERATIONS 236
-STEP 2614
+cd /q/gp/ant/losaltos
+q losaltos.q -p 20000
+q)system each"q losaltos.q -p ",/:string 20001+til 49
 
-\c 25 550
-min gen
-seed=37883
-run 2
-gen 10
-depth 13
-`ifFood
-`left
-(`prog2;(`prog3;(`ifFood;(`ifFood;`move;`prog2`right`move);`left);(`prog2;(`prog3;(`ifFood;(`ifFood;`right;(`prog2;`right;(`prog2;(`prog3;(`ifFood;(`ifFood;`right;`prog2`right`move);`left);`move;(`ifFood;`ifFood`left`move;`right));`left)));`left);`move;(`ifFood;`ifFood`left`move;`right));`left);(`ifFood;(`ifFood;(`ifFood;`left;(`prog2;(`prog3;(`ifFood;(`ifFood;(`ifFood;(`ifFood;`right;`prog2`right`move);`left);`prog2`right`move);`left);`move;(`ifFood;`ifFood`left`move;`right));`left));`move);`right));`left)
+/ new terminal window
+q losaltos.q -s -50
+/ a seed of zero seems to cause problems. here each process gets 10 seeds to try
+`gp_bestof upsert raze findHit peach 1+til 500
 
+\
+10-20 % of runs are usually successful

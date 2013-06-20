@@ -17,7 +17,7 @@ ERC:{rand[1.]*1 -1 rand 2}
 
 Model[`terms]:(`X;ERC)
 
-runModel -645765032
+runModel 499
 
 -1"";
 
@@ -25,10 +25,7 @@ runModel -645765032
 show phenoType first exec tree from gp_bestof where hit
 
 -1"";
+-1"to see steps to the solution type the browseStep command below into your q console";
+-1"requires internet connection for use of google gadget";
+-1"browseStep 499";
 
-/ requires internet for google gadget
--1"browseStep -645765032";
-
-\
-
-sum runModel each neg neg[30]?999999999
