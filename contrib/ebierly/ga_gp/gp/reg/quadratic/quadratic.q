@@ -12,17 +12,14 @@ SAMPLE:20
 
 Y:{sum x xexp 4 3 2 1}each X
 
-runModel -570
+runModel 305
 
 -1"";
 
 show phenoType first exec tree from gp_bestof where hit
 
 -1"";
+-1"to see steps to the solution type the browseStep command below into your q console";
+-1"requires internet connection for use of google gadget";
+-1"browseStep 305";
 
-/ requires internet for google gadget
--1"browseStep -570";
-
-\
-
-sum runModel each neg neg[30]?999999999
